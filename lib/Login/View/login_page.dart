@@ -48,43 +48,43 @@ class _LoginPageState extends State<LoginPage> {
                 image: Image.asset("assets/images/login.png").image),
           ),
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 80.0, horizontal: 30.0),
+            padding:
+                const EdgeInsets.symmetric(vertical: 80.0, horizontal: 30.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Text(
                   "Welcome back",
-                  style: TextStyle(color: Colors.white, fontSize: 32.0, fontWeight: FontWeight.w300),
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 32.0,
+                      fontWeight: FontWeight.w300),
                 ),
-
                 const Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0, 12, 0, 0),
                   child: Text(
                     "Login to access your account below.",
-                    style: TextStyle(color: Color(0xFF57636C), fontSize: 18.0, fontWeight: FontWeight.w500),
+                    style: TextStyle(
+                        color: Color(0xFF57636C),
+                        fontSize: 18.0,
+                        fontWeight: FontWeight.w500),
                   ),
                 ),
-
                 Padding(
-                  padding:
-                  const EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                   child: TextFormField(
                     controller: emailAddressLoginController,
                     obscureText: false,
                     decoration: InputDecoration(
-                      labelText:
-                      "Email Address",
-                      labelStyle:
-                          const TextStyle(
-                            color: Color(0xFF8B97A2),
-                            fontWeight: FontWeight.normal,
-                            fontSize: 14,
-                          ),
-                      hintText:
-                      "Enter your email...",
-                      hintStyle:
-                      const TextStyle(
+                      labelText: "Email Address",
+                      labelStyle: const TextStyle(
+                        color: Color(0xFF8B97A2),
+                        fontWeight: FontWeight.normal,
+                        fontSize: 14,
+                      ),
+                      hintText: "Enter your email...",
+                      hintStyle: const TextStyle(
                         color: Color(0xFF8B97A2),
                         fontWeight: FontWeight.normal,
                         fontSize: 14,
@@ -120,8 +120,7 @@ class _LoginPageState extends State<LoginPage> {
                       filled: true,
                       fillColor: const Color(0xFF111417),
                       contentPadding:
-                      const EdgeInsetsDirectional.fromSTEB(
-                          20, 24, 20, 24),
+                          const EdgeInsetsDirectional.fromSTEB(20, 24, 20, 24),
                     ),
                     style: const TextStyle(
                       color: Color(0xFFFFFFFF),
@@ -131,26 +130,20 @@ class _LoginPageState extends State<LoginPage> {
                     // FlutterFlowTheme.of(context).bodyText1,
                   ),
                 ),
-
                 Padding(
-                  padding:
-                  const EdgeInsetsDirectional.fromSTEB(0, 12, 0, 0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0, 12, 0, 0),
                   child: TextFormField(
                     controller: passwordLoginController,
                     obscureText: !passwordLoginVisibility,
                     decoration: InputDecoration(
-                      labelText:
-                      "Password",
-                      labelStyle:
-                      const TextStyle(
+                      labelText: "Password",
+                      labelStyle: const TextStyle(
                         color: Color(0xFF8B97A2),
                         fontWeight: FontWeight.normal,
                         fontSize: 14,
                       ),
-                      hintText:
-                      "Enter your password...",
-                      hintStyle:
-                      const TextStyle(
+                      hintText: "Enter your password...",
+                      hintStyle: const TextStyle(
                         color: Color(0xFF8B97A2),
                         fontWeight: FontWeight.normal,
                         fontSize: 14,
@@ -186,12 +179,11 @@ class _LoginPageState extends State<LoginPage> {
                       filled: true,
                       fillColor: const Color(0xFF111417),
                       contentPadding:
-                      const EdgeInsetsDirectional.fromSTEB(
-                          20, 24, 20, 24),
+                          const EdgeInsetsDirectional.fromSTEB(20, 24, 20, 24),
                       suffixIcon: InkWell(
                         onTap: () => setState(
-                              () => passwordLoginVisibility =
-                          !passwordLoginVisibility,
+                          () => passwordLoginVisibility =
+                              !passwordLoginVisibility,
                         ),
                         focusNode: FocusNode(skipTraversal: true),
                         child: Icon(
@@ -210,15 +202,13 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                 ),
-
                 Row(
                   mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment:
-                  MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(
-                          0, 24, 0, 24),
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(0, 24, 0, 24),
                       child: FFButtonWidget(
                         onPressed: () async {
                           // await Navigator.push(
@@ -290,14 +280,13 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ],
                 ),
-
                 Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     InkWell(
                       onTap: () async {
-                        await Get.to(()=> const RegisterPage());
+                        await Get.to(() => const RegisterPage());
                         // await Navigator.push(
                         //   context,
                         //   MaterialPageRoute(
@@ -307,8 +296,7 @@ class _LoginPageState extends State<LoginPage> {
                         // );
                       },
                       child: Container(
-                        width: MediaQuery.of(context).size.width *
-                            0.8,
+                        width: MediaQuery.of(context).size.width * 0.8,
                         height: 44,
                         decoration: BoxDecoration(
                           color: const Color(0xFF111417),
@@ -316,7 +304,7 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                         child: InkWell(
                           onTap: () async {
-                            await Get.to(()=> const RegisterPage());
+                            await Get.to(() => const RegisterPage());
                             // await Navigator.push(
                             //   context,
                             //   MaterialPageRoute(
@@ -327,26 +315,23 @@ class _LoginPageState extends State<LoginPage> {
                           },
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment:
-                            MainAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: const [
                               Text(
                                 "Don't have an account?",
-                                style:
-                                    TextStyle(
-                                      color: Color(0xFFFFFFFF),
-                                      fontWeight: FontWeight.normal,
-                                      fontSize: 14,
-                                    ),
+                                style: TextStyle(
+                                  color: Color(0xFFFFFFFF),
+                                  fontWeight: FontWeight.normal,
+                                  fontSize: 14,
+                                ),
                                 // FlutterFlowTheme.of(context).bodyText1,
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional
-                                    .fromSTEB(24, 0, 4, 0),
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(24, 0, 4, 0),
                                 child: Text(
                                   "Create",
-                                  style:
-                                  TextStyle(
+                                  style: TextStyle(
                                     color: Color(0xFF00968A),
                                     fontWeight: FontWeight.normal,
                                     fontSize: 14,
@@ -355,8 +340,7 @@ class _LoginPageState extends State<LoginPage> {
                               ),
                               Icon(
                                 Icons.arrow_forward_rounded,
-                                color:
-                                Color(0xFF00968A),
+                                color: Color(0xFF00968A),
                                 size: 24,
                               ),
                             ],
@@ -366,7 +350,6 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ],
                 ),
-
                 Center(
                   child: Padding(
                     padding: const EdgeInsetsDirectional.fromSTEB(0, 24, 0, 0),

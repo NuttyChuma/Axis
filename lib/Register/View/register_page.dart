@@ -53,13 +53,13 @@ class _RegisterPageState extends State<RegisterPage> {
           ),
           child: Padding(
             padding:
-                const EdgeInsets.symmetric(vertical: 80.0, horizontal: 30.0),
+                const EdgeInsets.symmetric(vertical: 50.0, horizontal: 30.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(24, 0, 0, 20),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -73,7 +73,6 @@ class _RegisterPageState extends State<RegisterPage> {
                     ],
                   ),
                 ),
-
                 const Text(
                   "Get Started",
                   style: TextStyle(
@@ -81,7 +80,6 @@ class _RegisterPageState extends State<RegisterPage> {
                       fontSize: 32.0,
                       fontWeight: FontWeight.w300),
                 ),
-
                 const Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0, 12, 0, 0),
                   child: Text(
@@ -92,7 +90,6 @@ class _RegisterPageState extends State<RegisterPage> {
                         fontWeight: FontWeight.w500),
                   ),
                 ),
-
                 Padding(
                   padding: const EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                   child: TextFormField(
@@ -152,7 +149,6 @@ class _RegisterPageState extends State<RegisterPage> {
                     // FlutterFlowTheme.of(context).bodyText1,
                   ),
                 ),
-
                 Padding(
                   padding: const EdgeInsetsDirectional.fromSTEB(0, 12, 0, 0),
                   child: TextFormField(
@@ -225,23 +221,19 @@ class _RegisterPageState extends State<RegisterPage> {
                     ),
                   ),
                 ),
-
                 Padding(
-                  padding:
-                  const EdgeInsetsDirectional.fromSTEB(0, 12, 0, 0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0, 12, 0, 0),
                   child: TextFormField(
                     controller: passwordConfirmController,
                     obscureText: !passwordConfirmVisibility,
                     decoration: InputDecoration(
-                      labelText:
-                      "Confirm Password",
+                      labelText: "Confirm Password",
                       labelStyle: const TextStyle(
                         color: Color(0xFF8B97A2),
                         fontWeight: FontWeight.normal,
                         fontSize: 14,
                       ),
-                      hintText:
-                      "Enter your password...",
+                      hintText: "Enter your password...",
                       hintStyle: const TextStyle(
                         color: Color(0xFF8B97A2),
                         fontWeight: FontWeight.normal,
@@ -278,12 +270,11 @@ class _RegisterPageState extends State<RegisterPage> {
                       filled: true,
                       fillColor: const Color(0xFF111417),
                       contentPadding:
-                      const EdgeInsetsDirectional.fromSTEB(
-                          20, 24, 20, 24),
+                          const EdgeInsetsDirectional.fromSTEB(20, 24, 20, 24),
                       suffixIcon: InkWell(
                         onTap: () => setState(
-                              () => passwordConfirmVisibility =
-                          !passwordConfirmVisibility,
+                          () => passwordConfirmVisibility =
+                              !passwordConfirmVisibility,
                         ),
                         focusNode: FocusNode(skipTraversal: true),
                         child: Icon(
@@ -302,19 +293,17 @@ class _RegisterPageState extends State<RegisterPage> {
                     ),
                   ),
                 ),
-
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(
-                          0, 24, 0, 24),
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(0, 24, 0, 24),
                       child: FFButtonWidget(
                         onPressed: () async {
                           if (passwordCreateController?.text !=
                               passwordConfirmController?.text) {
-                            ScaffoldMessenger.of(context)
-                                .showSnackBar(
+                            ScaffoldMessenger.of(context).showSnackBar(
                               const SnackBar(
                                 content: Text(
                                   'Passwords don\'t match!',
@@ -371,14 +360,12 @@ class _RegisterPageState extends State<RegisterPage> {
                     ),
                   ],
                 ),
-
                 Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      width:
-                      MediaQuery.of(context).size.width * 0.8,
+                      width: MediaQuery.of(context).size.width * 0.8,
                       height: 44,
                       decoration: BoxDecoration(
                         color: const Color(0xFF111417),
@@ -402,8 +389,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         },
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment:
-                          MainAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: const [
                             Icon(
                               Icons.arrow_back_rounded,
@@ -412,12 +398,10 @@ class _RegisterPageState extends State<RegisterPage> {
                             ),
                             Padding(
                               padding:
-                              EdgeInsetsDirectional.fromSTEB(
-                                  4, 0, 24, 0),
+                                  EdgeInsetsDirectional.fromSTEB(4, 0, 24, 0),
                               child: Text(
                                 "Login",
-                                style:
-                                TextStyle(
+                                style: TextStyle(
                                   color: Color(0xFF00968A),
                                   fontWeight: FontWeight.normal,
                                   fontSize: 14,
@@ -439,7 +423,6 @@ class _RegisterPageState extends State<RegisterPage> {
                     ),
                   ],
                 ),
-
                 Center(
                   child: Padding(
                     padding: const EdgeInsetsDirectional.fromSTEB(0, 24, 0, 0),
